@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <style type="text/css">
+
+#resultbox{
+   margin-top: 600px;
+   margin-left: 1450px;
+   position: fixed;
+}
+
+        </style>
+    </head>
+    <body>
+
+
+
+            <input type="text" id="number1" placeholder="Sayı 1 "><br><br>
+
+            <input type="text" id="number2"  placeholder="Sayı 2 "><br><br>
+            <input type="button" id="result" value="Submit">
+
+        <br>
+        <div id="resultbox"></div>
+
+
+    <script>
+    const btn = document.getElementById("result");
+    btn.onclick=function(){
+    const number1 = Number(document.getElementById("number1").value);
+    const number2 = Number(document.getElementById("number2").value);
+    const result = number1+number2;
+
+    document.getElementById('resultbox').innerHTML = "Sonuç"+result;
+    }
+
+    </script>
+    </body>
+</html>
