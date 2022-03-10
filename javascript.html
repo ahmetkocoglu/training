@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+  </head>
+  <body>
+<div id="json" ></div>
+
+
+  </body>
+  <script type="text/javascript">
+const json = {
+"name" : "john",
+"surname" : "michelle"
+
+};
+const json2 = {
+"name" : "john2",
+"surname" : "michelle2"
+
+};
+const json3 = {
+  "name": "merhaba",
+  "surname": "deneme2",
+  "deneme3": "deneme"
+}
+const users=[json,json2,json3];
+users.forEach(printFunction)
+function printFunction(item,index){
+  document.getElementById('json').innerText+=JSON.stringify(item,index);
+}
+
+
+
+
+
+
+  </script>
+</html>
