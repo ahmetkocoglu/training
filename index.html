@@ -42,13 +42,11 @@
         return '<div id="row' + i + '">' + v.name + ' ' + v.surname + '</div>';
     });
 
-
     for (let i = 0; i < users.length; i++) {
         html += '<div id="row' + i + '">' + users[i].name + ' ' + users[i].surname + '</div>';
     }
 
     document.getElementById('map').innerHTML = html;
-
 </script>
 </body>
 </html>
