@@ -18,23 +18,33 @@
     </style>
 </head>
 <body>
-<div id="name">ahmet</div>
-<div id="surname"></div>
-<div id="nameSurname"></div>
-<script>
-    f();
+<div id="myPage"></div>
+    <script>
+        const userOne = {
+            name: "Melih",
+            surname: "DANKAC",
+        };
 
-    function f() {
-        const name = 'net';
-        const surname = 'adım';
-        let nameSurname = '';
-        document.getElementById('name').innerText = '<strong>' + name + '</strong>';
-        document.getElementById('surname').innerHTML = surname;
+        const userTwo = {
+            name: "Bilal",
+            surname: "KARTAL",
+        };
 
-        nameSurname = name + ' ' + surname;
-        document.getElementById('nameSurname').innerHTML = nameSurname;
-    }
-    // fork .. ..
-</script>
+        const userThree = {
+            name: "ABCD",
+            surname: "EFG",
+        };
+
+        const users = [userOne, userTwo, userThree];
+
+        users.forEach((item, index) => {
+            let myJSON = JSON.stringify(item);
+            document.getElementById("myPage").innerHTML +=
+                JSON.stringify(item) + "<br/>";
+            // item.name + " " + item.surname + "<br>";
+
+            console.log(JSON.stringify(item) + "<br/>");
+        });
+    </script>
 </body>
 </html>
