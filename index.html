@@ -4,37 +4,51 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        body {
-            background-color: rgba(115, 38, 38, 0.98);
-            color: white;
-        }
-        #surname{
-            padding: 10px 0 100px 100px;
-            margin: 100px;
-            border-bottom-color: black !important;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
     </style>
 </head>
 <body>
-<div id="name">ahmet</div>
-<div id="surname"></div>
-<div id="nameSurname"></div>
+<div id="for"></div>
+<div id="map"></div>
 <script>
-    f();
+    const users = [{
+        id: 1,
+        name: 'ahmet1',
+        surname: 'kocoglu'
+    }, {
+        id: 2,
+        name: 'ahmet2',
+        surname: 'kocoglu'
+    }, {
+        id: 3,
+        name: 'ahmet3',
+        surname: 'kocoglu'
+    }, {
+        id: 4,
+        name: 'ahmet4',
+        surname: 'kocoglu'
+    }];
 
-    function f() {
-        const name = 'net';
-        const surname = 'adım';
-        let nameSurname = '';
-        document.getElementById('name').innerText = '<strong>' + name + '</strong>';
-        document.getElementById('surname').innerHTML = surname;
+    const id = 1;
+    // document.getElementById('map').innerText = JSON.stringify(users.filter(k => k.id == id));
+    // document.getElementById('map').innerText = users.find(k => k.id == id).name;
+    //
+    // document.getElementById('map').innerText = JSON.stringify(users.map(k => {
+    //     if (k.id === id){
+    //         return k.name;
+    //     }
+    // }));
+    // document.getElementById('for').innerText = JSON.stringify(users.find(k => {
+    //     if (k.id === id){
+    //         return k.name;
+    //     }
+    // }));
 
-        nameSurname = name + ' ' + surname;
-        document.getElementById('nameSurname').innerHTML = nameSurname;
-    }
-    // fork .. ..
+    const mapArray = users.map(k => {
+        if (k.id === id){
+            return {name: k.name, id: k.id};
+        }
+    });
+    debugger;
 </script>
 </body>
 </html>
