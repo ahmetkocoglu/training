@@ -5,6 +5,31 @@
     <title>Javascript</title>
   </head>
   <body>
-asdasdsa
+<div id="json" ></div>
+
+
   </body>
+  <script type="text/javascript">
+const json = {
+"name" : "john",
+"surname" : "michelle"
+
+};
+const json2 = {
+"name" : "john2",
+"surname" : "michelle2"
+
+};
+const users=[json,json2];
+users.forEach(printFunction)
+function printFunction(item,index){
+  document.getElementById('json').innerText+=JSON.stringify(item,index);
+}
+
+
+
+
+
+
+  </script>
 </html>
