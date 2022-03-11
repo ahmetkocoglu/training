@@ -2,39 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        body {
-            background-color: rgba(115, 38, 38, 0.98);
-            color: white;
-        }
-        #surname{
-            padding: 10px 0 100px 100px;
-            margin: 100px;
-            border-bottom-color: black !important;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-    </style>
+    <title>Net Adım</title>
 </head>
 <body>
-<div id="name">ahmet</div>
-<div id="surname"></div>
-<div id="nameSurname"></div>
+<div id="app"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-    f();
-
-    function f() {
-        const name = 'net';
-        const surname = 'adım';
-        let nameSurname = '';
-        document.getElementById('name').innerText = '<strong>' + name + '</strong>';
-        document.getElementById('surname').innerHTML = surname;
-
-        nameSurname = name + ' ' + surname;
-        document.getElementById('nameSurname').innerHTML = nameSurname;
-    }
-    // fork .. ..
+    $(function (){
+        $('#app').text('111');
+    });
 </script>
 </body>
 </html>
