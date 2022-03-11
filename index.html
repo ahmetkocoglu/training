@@ -5,12 +5,23 @@
     <title>Net Adım</title>
 </head>
 <body>
+<input type="text" name="name" id="name" class="name" placeholder="Ad Giriniz">
+<button type="button" id="click">tıkla</button>
 <div id="app"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-    $(function (){
-        $('#app').text('111');
-    });
+    // $('#name').keyup(function () {
+    //     $('#app').text($(this).val());
+    // })
+    $(document).on('change', 'input[name="name"]', function () {
+        // $('#app').text($(this).val());
+        // $('#app').html('<strong>abc</strong>');
+        $('#click').trigger('click');
+    })
+    $(document).on('click', '#click', function () {
+        // $('#app').text($(this).val());
+        $('#app').html('<strong>abc</strong>');
+    })
 </script>
 </body>
 </html>
